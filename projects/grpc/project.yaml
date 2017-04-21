@@ -11,3 +11,8 @@ auto_ccs:
   - "yangg@google.com"
   - "yuxuanli@google.com"
   - "zyc@google.com"
+sanitizers:
+  - address
+  - memory:
+     experimental: True
+  - undefined

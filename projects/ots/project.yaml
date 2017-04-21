@@ -1,2 +1,7 @@
 homepage: "https://github.com/khaledhosny/ots"
 primary_contact: "dr.khaled.hosny@gmail.com"
+sanitizers:
+  - address
+  - memory:
+     experimental: True
+  - undefined

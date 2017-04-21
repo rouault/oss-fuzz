@@ -14,3 +14,8 @@ auto_ccs:
   - "joshz@google.com"
   - "cfir@google.com"
   - "mruthven@google.com"
+sanitizers:
+  - address
+  - memory:
+     experimental: True
+  - undefined

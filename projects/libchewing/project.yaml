@@ -1,2 +1,7 @@
 homepage: "http://chewing.im/"
 disabled: true
+sanitizers:
+  - address
+  - memory:
+     experimental: True
+  - undefined

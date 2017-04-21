@@ -1,2 +1,7 @@
 auto_ccs:
   - "vitalybuka@chromium.org"
+sanitizers:
+  - address
+  - memory:
+     experimental: True
+  - undefined
