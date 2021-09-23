@@ -16,8 +16,12 @@
 
 FROM gcr.io/oss-fuzz-base/base-builder
 RUN apt-get update && apt-get install -y make cmake g++
-RUN git clone --depth 1 https://github.com/uclouvain/openjpeg openjpeg
+#RUN git clone --depth 1 https://github.com/uclouvain/openjpeg openjpeg
+RUN git clone --depth 1 --branch avoid_out_of_bounds_read_with_ds0_ht_02_b11 https://github.com/rouault/openjpeg openjpeg
 # openjpeg-data is used to create a seed corpus
-RUN git clone --depth 1 https://github.com/uclouvain/openjpeg-data openjpeg/data
+#RUN git clone --depth 1 https://github.com/uclouvain/openjpeg-data openjpeg/data
+RUN git clone --depth 1 https://github.com/osamu620/OpenHTJ2K openjpeg/data
+RUN mkdir openjpeg/data/input
+RUN mv openjpeg/data/conformance_data  openjpeg/data/input/conformance
 WORKDIR openjpeg
 COPY build.sh $SRC/
